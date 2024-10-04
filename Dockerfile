@@ -1,2 +1,1 @@
-FROM alpine:latest
-CMD ping6 -c 2 -i 1145141919810 2001:4860:4860::8888
+CMD ["--tls-crt=/opt/fake.crt", "--tls-key=/opt/fake.key", "--https-server-name=DohnaNS", "--edns-addr", "--upstream-mode=parallel", "--listen=0.0.0.0", "--port=0", "--https-port=9443", "--upstream=8.8.8.8", "--upstream=8.8.4.4", "--bootstrap=8.8.8.8", "--bootstrap=8.8.4.4", "--fallback=9.9.9.11", "--fallback=149.112.112.11", "--fallback=1.1.1.1", "--fallback=1.0.0.1", "--timeout=1s", "--cache-size=0", "--ratelimit-subnet-len-ipv4=32", "--ratelimit-subnet-len-ipv6=128", "--udp-buf-size=0"]

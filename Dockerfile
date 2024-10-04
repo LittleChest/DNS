@@ -1,0 +1,2 @@
+FROM alpine:latest
+CMD ping6 -c 2 -i 1145141919810 2001:4860:4860::8888
